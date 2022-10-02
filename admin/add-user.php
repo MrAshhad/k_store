@@ -19,13 +19,15 @@
             ini_set('display_errors', 0);
 
 
-            $user_fname = $_POST["fname"];
+            if(isset($_POST["save"]))
+            {
+                $user_fname = $_POST["fname"];
             $user_lname = $_POST["lname"];
             $user_name = $_POST["user"];
             $user_password = $_POST["password"];
             $user_role = $_POST["role"];
 
-            $conn = mysqli_connect("localhost","root","","kstore");
+            include "config.php";
 
             $query = "SELECT * from `user` WHERE `username` = '{$user_name}'";
 
@@ -44,8 +46,9 @@
 
                 mysqli_query($conn,$query1);
 
-                header("location:http://localhost:82/kj/admin/users.php");
+                header("location:http://localhost:80/k_store/admin/users.php");
 
+            }
             }
 
 

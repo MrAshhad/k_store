@@ -1,3 +1,14 @@
+<?php 
+session_start();
+if(isset($_SESSION["username"]))
+{
+    header("location:http://localhost/k_store/admin/products.php");
+}
+?>
+
+
+
+
 <!doctype html>
 <html>
    <head>
@@ -12,6 +23,28 @@
 
     <body>
         <div id="wrapper-admin" class="body-content">
+            <?php if(isset($_POST["login"]))
+            {
+                $username = $_POST["username"];
+                $userpassword = $_POST["password"];
+                include "config.php";
+                $query = "SELECT `user_id`,`username`,`role` FROM `user` WHERE username = '{$username}' AND password = '{$userpassword}'";
+                $result = mysqli_query($conn,$query);
+                if(mysqli_num_rows($result)){
+                    while($row = mysqli_fetch_assoc($result)){
+                        session_start();
+                        $_SESSION["username"] = $row["username"];
+                        $_SESSION["user_id"] = $row["user_id"];
+                        $_SESSION["user_role"] = $row["role"];
+
+                        header("location:http://localhost/k_store/admin/products.php");
+                    }
+                }
+                else{
+                    echo '<script>alert("invalid username and password")</script>';
+                }
+            }
+            ?>
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-4 col-md-4">
