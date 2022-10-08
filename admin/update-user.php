@@ -20,7 +20,7 @@ if(mysqli_num_rows($result))
             </div>
             <div class="col-md-offset-4 col-md-4">
                 <!-- Form Start -->
-                <form action="edit-user.php" method="GET">
+                <form action="edit-user.php" method="POST">
                     <div class="form-group">
                         <input type="hidden" name="sid" class="form-control" value="<?php echo $row['user_id']; ?>" >
                     </div>
