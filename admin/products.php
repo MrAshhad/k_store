@@ -10,16 +10,6 @@ if (mysqli_num_rows($result) > 0) {
 
 
 
-
-
-
-
-
-
-
-
-
-
   <div id="admin-content">
       <div class="container">
           <div class="row">
@@ -36,6 +26,7 @@ if (mysqli_num_rows($result) > 0) {
                           <th>Title</th>
                           <th>Category</th>
                           <th>Date</th>
+                          <th>Description</th>
                           <th>Author</th>
                           <th>Edit</th>
                           <th>Delete</th>
@@ -48,9 +39,10 @@ if (mysqli_num_rows($result) > 0) {
                         <tr>
                             <td class='id'><?php echo $row['post_id'];?></td>
                             <td class='id'><?php echo $row['title'];?></td>
-                            <td class='id'><?php echo $row['description'];?></td>
                             <td class='id'><?php echo $row['category'];?></td>
                             <td class='id'><?php echo $row['post_date'];?></td>
+                            <td class='id'><?php echo $row['description'];?></td>
+                            <td class='id'><?php echo $row['author'];?></td>
                             <td class='edit'><a href='update-products.php?id=<?php echo $row["post_id"];?>'><i class='fa fa-edit'></i></a></td>
                             <td class='delete'><a href='delete-products.php?id=<?php echo $row["post_id"];?>'><i class='fa fa-trash-o'></i></a></td>
                         </tr>
