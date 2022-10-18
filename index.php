@@ -55,46 +55,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                            include "config.php";
+                            $query = "SELECT * from `category`";
+                            $result = mysqli_query($conn, $query);
+                            if (mysqli_num_rows($result) > 0) {
+                            while($row = mysqli_fetch_assoc($result))
+                            {
+                            ?>
                             <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
+                                <td><a href="Product.php" style="color: black;" role="button"><?php echo $row['category_name'];?></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Accesories</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Health & lifestyle</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Babies & Toys</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="Products.html" style="color: black;" role="button">Electronic Devices</a>
-                                </td>
-                            </tr>
+                            <?php } } ?>
                         </tbody>
                     </table>
 
@@ -117,9 +90,6 @@
                         </div>
                         <div class="carousel-item">
                             <img src="images/carousel1.jpg" height="100%" width="100%" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel4.jpg" height="100%" width="100%" alt="">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -154,163 +124,27 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row">
-
+                                        <?php
+                                        include "config.php";
+                                        $query = "SELECT * from `post` LEFT JOIN `category` ON post.category = category.category_id  LEFT JOIN `user` ON post.author = user.user_id";
+                                        $result = mysqli_query($conn, $query);
+                                        if (mysqli_num_rows($result) > 0) {
+                                        while($row = mysqli_fetch_assoc($result))
+                                        {
+                                        ?>
                                             <div class="col-md-3 mb-2">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product1.jpg"
+                                                    <img class="img-fluid" alt="100%x280" src="<?php echo $row['post_img'];?>"
                                                         width="100%" height="100%">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
+                                                        <h4 class="card-title"><?php echo $row['title'];?></h4>
+                                                        <p class="card-text"><?php echo $row['description'];?></p>
                                                         <button class="btn">See Product</button>
                                                     </div>
-
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product2.webp"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
+                                            <?php } } ?>
 
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product3.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product4.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product5.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product6.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product7.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product1.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product2.webp"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product3.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product4.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-2">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="images/product5.jpg"
-                                                        width="100%" height="100%">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Product</h4>
-                                                        <p class="card-text">Product Details</p>
-                                                        <button class="btn">See Product</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
 
                                         </div>
                                     </div>

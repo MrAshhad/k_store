@@ -1,7 +1,7 @@
 <?php include "header.php"; ?>
 <?php
 include "config.php";
-$query = "SELECT * from `post`";
+$query = "SELECT * from `post` LEFT JOIN `category` ON post.category = category.category_id  LEFT JOIN `user` ON post.author = user.user_id";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0) {
 
@@ -39,10 +39,10 @@ if (mysqli_num_rows($result) > 0) {
                         <tr>
                             <td class='id'><?php echo $row['post_id'];?></td>
                             <td class='id'><?php echo $row['title'];?></td>
-                            <td class='id'><?php echo $row['category'];?></td>
+                            <td class='id'><?php echo $row['category_name'];?></td>
                             <td class='id'><?php echo $row['post_date'];?></td>
                             <td class='id'><?php echo $row['description'];?></td>
-                            <td class='id'><?php echo $row['author'];?></td>
+                            <td class='id'><?php echo $row['username'];?></td>
                             <td class='edit'><a href='update-products.php?id=<?php echo $row["post_id"];?>'><i class='fa fa-edit'></i></a></td>
                             <td class='delete'><a href='delete-products.php?id=<?php echo $row["post_id"];?>'><i class='fa fa-trash-o'></i></a></td>
                         </tr>
