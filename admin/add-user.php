@@ -46,7 +46,7 @@
 
                 mysqli_query($conn,$query1);
 
-                header("location:http://localhost:80/k_store/admin/users.php");
+                header("location:{$host}/admin/users.php");
 
             }
             }

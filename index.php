@@ -134,12 +134,12 @@
                                         ?>
                                             <div class="col-md-3 mb-2">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="<?php echo $row['post_img'];?>"
+                                                    <img class="img-fluid" alt="100%x280" src="admin/upload/<?php echo $row['post_img'];?>"
                                                         width="100%" height="100%">
                                                     <div class="card-body">
                                                         <h4 class="card-title"><?php echo $row['title'];?></h4>
                                                         <p class="card-text"><?php echo $row['description'];?></p>
-                                                        <button class="btn">See Product</button>
+                                                        <a href="seeproduct.php?id=<?php echo $row['post_id'];?>"><button class="btn">See Product</button></a>
                                                     </div>
                                                 </div>
                                             </div>
