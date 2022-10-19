@@ -23,26 +23,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="images/logo.png" height="50" alt="CoolBrand">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
-                    <a href="About Us.html" class="nav-item nav-link">About Us</a>
-                    <a href="ContactUs.html" class="nav-item nav-link">Contact Us</a>
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a href="Login.html" class="nav-item nav-link">Login</a>
-                </div>
-            </div>
-        </div>
-    </nav> <br><br>
+    <?php include "header.php"?>
     <!-- navbar -->
     <div class="container-fluid">
         <div class="row">
@@ -134,7 +115,7 @@
                                         ?>
                                             <div class="col-md-3 mb-2">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="<?php echo $row['post_img'];?>"
+                                                    <img class="img-fluid" alt="100%x280" src="admin/upload/<?php echo $row['post_img'];?>"
                                                         width="100%" height="100%">
                                                     <div class="card-body">
                                                         <h4 class="card-title"><?php echo $row['title'];?></h4>
@@ -158,60 +139,7 @@
         </div>
     </div> <br><br><br>
     <!-- footer -->
-    <div class="container-flex">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-4">
-                    <div>
-                        <div>
-                            <img src="Logo.PNG" alt=""> <br><br>
-                        </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
-                            pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social ">
-                            <i class="fa fa-facebook-official fa-lg"></i>
-                            <i class="fa fa-instagram fa-lg"></i>
-                            <i class="fa fa-twitter fa-lg"></i>
-                            <i class="fa fa-linkedin-square fa-lg"></i>
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2"> <br>
-                    <h5 class="heading">Services</h5>
-                    <ul>
-                        <li>IT Consulting -</li>
-                        <li>Development</li>
-                        <li>Cloud</li>
-                        <li>DevOps & Support</li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-2 "> <br>
-
-                    <h5 class="heading">Industries</h5>
-                    <ul class="card-text">
-                        <li>Finance</li>
-                        <li>Public Sector</li>
-                        <li>Smart Office</li>
-                        <li>Retail</li>
-                    </ul>
-                </div>
-                <div class="col-sm-2 "> <br>
-
-                    <h5 class="heading">Company</h5>
-                    <ul class="card-text">
-                        <li>About Us</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>Join Us</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row" style="font-size:10px;">
-            </div>
-        </div>
-    </div>
+    <?php include "footer.php"; ?>
     <!-- Footer -->
 </body>
 

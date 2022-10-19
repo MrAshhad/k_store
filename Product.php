@@ -21,26 +21,7 @@
 </head>
 <body>
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="images/logo.png" height="28" alt="CoolBrand">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="index.php" class="nav-item nav-link ">Home</a>
-                    <a href="About Us.html" class="nav-item nav-link">About Us</a>
-                    <a href="ContactUs.html" class="nav-item nav-link ">Contact Us</a>
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a href="Login.html" class="nav-item nav-link">Login</a>
-                </div>
-            </div>
-        </div>
-    </nav> <br><br>
+      <?php include "header.php"?><br><br>
     <!-- navbar -->
     <div class="container">
         <h1>Products</h1>
@@ -55,7 +36,7 @@
                                         ?>
                                             <div class="col-md-3 mb-2">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="<?php echo $row['post_img'];?>"
+                                                    <img class="img-fluid" alt="100%x280" src="admin/upload/<?php echo $row['post_img'];?>"
                                                         width="100%" height="100%">
                                                     <div class="card-body">
                                                         <h4 class="card-title"><?php echo $row['title'];?></h4>
