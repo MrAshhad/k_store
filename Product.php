@@ -21,26 +21,7 @@
 </head>
 <body>
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="images/logo.png" height="28" alt="CoolBrand">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="index.php" class="nav-item nav-link ">Home</a>
-                    <a href="About Us.html" class="nav-item nav-link">About Us</a>
-                    <a href="ContactUs.html" class="nav-item nav-link ">Contact Us</a>
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a href="Login.html" class="nav-item nav-link">Login</a>
-                </div>
-            </div>
-        </div>
-    </nav> <br><br>
+      <?php include "header.php"?><br><br>
     <!-- navbar -->
     <div class="container">
         <h1>Products</h1>
