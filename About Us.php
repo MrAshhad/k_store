@@ -55,6 +55,7 @@
                 vero incidunt quis quos ea natus?</p>
         </div>
     </div>
+    <?php include "footer.php";?>
 </body>
 
 </html>
