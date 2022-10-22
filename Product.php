@@ -41,7 +41,7 @@
                                                     <div class="card-body">
                                                         <h4 class="card-title"><?php echo $row['title'];?></h4>
                                                         <p class="card-text"><?php echo $row['description'];?></p>
-                                                        <button class="btn">See Product</button>
+                                                        <a href="seeproduct.php"><button class="btn">See Product</button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -50,6 +50,5 @@
 
                                         </div>
     </div>
-    
 </body>
 </html>
