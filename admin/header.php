@@ -63,6 +63,9 @@ if(!isset($_SESSION["username"]))
                             <li>
                                 <a href="users.php">Users</a>
                             </li>
+                            <li>
+                                <a href="customer.php">Customer</a>
+                            </li>
                             <?php } ?>
                         </ul>
                     </div>

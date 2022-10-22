@@ -61,8 +61,9 @@ if(mysqli_num_rows($result))
             <div class="form-group">
                 <label for="">Product image</label>
                 <input type="file" name="new-image">
-                <img  src="upload/products_1.jpg" height="150px">
-                <input type="hidden" name="old-image" value="<?php echo $row['post_img']; ?>">
+                <h3>Previous image</h3>
+                <img  src="upload/<?php echo $row['post_img']; ?>" height="150px">
+                <input type="hidden" name="old-image" value="admin/upload<?php echo $row['post_img']; ?>">
             </div>
             <input type="submit" name="submit" class="btn btn-primary" value="Update" />
         </form>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +20,6 @@
     <style>
     </style>
 </head>
-
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,11 +34,11 @@
                 <div class="navbar-nav">
                     <a href="index.php" class="nav-item nav-link active">Home</a>
                     <a href="product.php" class="nav-item nav-link active">Products</a>
-                    <a href="About Us.html" class="nav-item nav-link">About Us</a>
+                    <a href="About Us.php" class="nav-item nav-link">About Us</a>
                     <a href="ContactUs.php" class="nav-item nav-link">Contact Us</a>
                 </div>
                 <div class="navbar-nav ms-auto">
-                    <a href="Login.php" class="nav-item nav-link">Login</a>
+                            <a href="Login.php" class="nav-item nav-link">Login</a>
                 </div>
 
 <!-- The form -->

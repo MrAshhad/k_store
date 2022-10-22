@@ -53,60 +53,7 @@
     </div>
     <br> <br> <br>
     <!-- footer -->
-    <div class="container-flex">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-4">
-                    <div>
-                        <div>
-                            <img src="Logo.PNG" alt=""> <br><br>
-                        </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
-                            pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social ">
-                            <i class="fa fa-facebook-official fa-lg"></i>
-                            <i class="fa fa-instagram fa-lg"></i>
-                            <i class="fa fa-twitter fa-lg"></i>
-                            <i class="fa fa-linkedin-square fa-lg"></i>
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2"> <br>
-                    <h5 class="heading">Services</h5>
-                    <ul>
-                        <li>IT Consulting -</li>
-                        <li>Development</li>
-                        <li>Cloud</li>
-                        <li>DevOps & Support</li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-2 "> <br>
-
-                    <h5 class="heading">Industries</h5>
-                    <ul class="card-text">
-                        <li>Finance</li>
-                        <li>Public Sector</li>
-                        <li>Smart Office</li>
-                        <li>Retail</li>
-                    </ul>
-                </div>
-                <div class="col-sm-2 "> <br>
-
-                    <h5 class="heading">Company</h5>
-                    <ul class="card-text">
-                        <li>About Us</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>Join Us</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row" style="font-size:10px;">
-            </div>
-        </div>
-    </div>
+    <?php include "footer.php"?>
     <!-- Footer -->
 </body>
 </html>

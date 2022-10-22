@@ -27,10 +27,45 @@
     <!-- navbar -->
     <div class="container">
         <h2>Login</h2>
-        <form onsubmit="return formValidate()" action="">
+        <?php
+            ini_set('display_errors', 0);
+
+
+            if(isset($_POST["ss"]))
+            {
+            $cname = $_POST["cnam"];
+            $cemai = $_POST["email"];
+            $cpass = $_POST["pwd"];
+            $ccpass = $_POST["pwd"];
+
+            include "config.php";
+
+            $query = "SELECT * from `customer` WHERE `cuser` = '{$cname}'";
+
+            $result = mysqli_query($conn,$query);
+
+            if(mysqli_num_rows($result)>0)
+            {
+                echo "customer already exist";
+
+            }
+            else
+            {
+                include "config.php";
+
+                $query1 = "INSERT INTO `customer`(`cuser`, `email`, `password`, `cpassword`) VALUES ('{$cname}','{$cemai}','{$cpass}','{$ccpass}');";
+
+                mysqli_query($conn,$query1);
+
+                header("location:http://localhost/k_store/index.php");
+
+            }
+            }
+            ?>
+        <form onsubmit="return formValidate()" action="<?php $_SERVER["PHP_SELF"] ?>" method="POST">
             <div class="form-group">
                 <label for="email">User:</label>
-                <input type="text" class="form-control" id="uname" placeholder="Enter Name" name="email">
+                <input type="text" class="form-control" id="uname" placeholder="Enter Name" name="cnam">
                 <span id="s1" style="font-weight: bold;" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -48,9 +83,9 @@
                 <input type="password" class="form-control" id="pwd2" placeholder="Enter password" name="pwd">
                 <span id="s4" style="font-weight: bold;" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block" name="ss">Submit</button>
         </form>
-    </div>
+    </div><br><br>
 
     <script>
         function formValidate() {
@@ -102,6 +137,7 @@
 
 
     </script>
+    <?php include "footer.php"?>
 </body>
 
 </html>
